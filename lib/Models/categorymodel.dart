@@ -1,11 +1,11 @@
-class Newsheadline_model {
+class Categorymodel {
   String? status;
   int? totalResults;
   List<Articles>? articles;
 
-  Newsheadline_model({this.status, this.totalResults, this.articles});
+  Categorymodel({this.status, this.totalResults, this.articles});
 
-  Newsheadline_model.fromJson(Map<String, dynamic> json) {
+  Categorymodel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     totalResults = json['totalResults'];
     if (json['articles'] != null) {

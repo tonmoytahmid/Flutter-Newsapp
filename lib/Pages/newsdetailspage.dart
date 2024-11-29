@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +33,7 @@ class _NewsdetailspageState extends State<Newsdetailspage> {
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: 250,
             width: double.infinity,
             child: CachedNetworkImage(
@@ -54,7 +56,7 @@ class _NewsdetailspageState extends State<Newsdetailspage> {
             height: 20,
           ),
           Text(
-            "Title:" + widget.title,
+            "Title:${widget.title}",
             style: TextStyle(
                 color: Colors.blue, fontSize: 16, fontWeight: FontWeight.bold),
           ),
@@ -62,7 +64,7 @@ class _NewsdetailspageState extends State<Newsdetailspage> {
             height: 20,
           ),
           Text(
-            "Description:" + widget.description,
+            "Description:${widget.description}",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -72,12 +74,12 @@ class _NewsdetailspageState extends State<Newsdetailspage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Source name:" + widget.source,
+                "Source name:${widget.source}",
                 style:
                     TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
               ),
               Text(
-                "PublishedAt:" + widget.ptime,
+                "PublishedAt:${widget.ptime}",
                 style:
                     TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
               )
